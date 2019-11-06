@@ -25,12 +25,13 @@ class _splashScreenState extends State<splashScreen> {
   Widget build(BuildContext context) {
     return new Stack(
       children: <Widget>[
-        new Center(
+        /*new Center(
           child: new Image.asset('assets/images/background.jpg',
             fit: BoxFit.fill, width: 490.0,height: 1200,),
-        ),
+        ),*/
         new SplashScreen(
-          seconds: 5,
+          seconds: 7,
+          //imageBackground: new AssetImage("assets/images/background.jpg")),
           navigateAfterSeconds: new MyDashboard(),
           backgroundColor: Colors.white,
           loaderColor: Colors.greenAccent.shade700,

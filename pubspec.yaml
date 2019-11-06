@@ -48,7 +48,15 @@ flutter:
   #  - images/a_dot_ham.jpeg
 
   assets:
-    - assets/images/background.jpg
+    - assets/images/background_dashbaord.jpg
+    - assets/images/Bracelet_96px.png
+    - assets/images/Bracelet_48px.png
+    - assets/images/Classroom_96px.png
+    - assets/images/Classroom_48px.png
+    - assets/images/Guru_96px.png
+    - assets/images/Guru_48px.png
+    - assets/images/Monastery_96px.png
+    - assets/images/Monastery_48px.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
