@@ -45,10 +45,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+  #  - images/a_dot_ham.jpeg .jpg
 
   assets:
+    - assets/images/image_top_chapelet.jpg
     - assets/images/background_dashbaord.jpg
+    - assets/images/background_chapelet.jpg
     - assets/images/Bracelet_96px.png
     - assets/images/Bracelet_48px.png
     - assets/images/Classroom_96px.png

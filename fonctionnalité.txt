@@ -8,6 +8,8 @@
 
 -Message de bienvenue SnackBar
 
+-Ajouter un bottom bar pour ramener au dashbord
+
 
 title: Row(
           mainAxisAlignment: MainAxisAlignment.center,

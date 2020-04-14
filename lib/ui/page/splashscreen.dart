@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:simple_chapelet/ui/page/dashboard.dart';
 
+import 'package:simple_chapelet/ui/page/Chapelet.dart';
+import 'package:simple_chapelet/ui/page/Apprentissage.dart';
+import 'package:simple_chapelet/ui/page/Invocations.dart';
+import 'package:simple_chapelet/ui/page/Islam_piliers.dart';
+
 
 
 class MyApp extends StatelessWidget {
@@ -11,6 +16,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mon Chapelet',
       home: splashScreen(),
+      routes: {
+        '/dash': (BuildContext _) => new MyDashboard(),
+        '/chapelet': (BuildContext _) => new Chapelet(),
+        '/apprentissage': (BuildContext _) => new Apprentissage(),
+        '/invocations': (BuildContext _) => new Invocations(),
+        '/islampiliers': (BuildContext _) => new Islam_piliers(),
+      },
     );
   }
 }
@@ -39,7 +51,8 @@ class _splashScreenState extends State<splashScreen> {
             style: new TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 35.0,
-              color: Colors.greenAccent.shade700,
+              //color: Colors.greenAccent.shade700,
+              color: Color.fromRGBO(49, 87, 110, 1.0),
               fontFamily: 'Kurale',
             ),),
           loadingText: new Text("Chargement...", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),

@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:simple_chapelet/ui/page/Chapelet.dart';
-import 'package:simple_chapelet/ui/page/Apprentissage.dart';
-import 'package:simple_chapelet/ui/page/Invocations.dart';
-import 'package:simple_chapelet/ui/page/Islam_piliers.dart';
 
 class MenuDashBoard extends StatelessWidget {
 
@@ -15,36 +11,9 @@ class MenuDashBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 1.0,
       margin: EdgeInsets.all(8.0),
-      child: InkWell(
-        onTap: (){
-
-          Navigator.of(context).pop();
-
-          switch (fenetre) {
-            case 1:
-              Navigator.push(context, new MaterialPageRoute(
-                  builder: (BuildContext context) => new Chapelet()
-              ));
-              break;
-            case 2:
-              Navigator.push(context, new MaterialPageRoute(
-                  builder: (BuildContext context) => new Apprentissage()
-              ));
-              break;
-            case 3:
-              Navigator.push(context, new MaterialPageRoute(
-                  builder: (BuildContext context) => new Invocations()
-              ));
-              break;
-            case 4:
-              Navigator.push(context, new MaterialPageRoute(
-                  builder: (BuildContext context) => new Islam_piliers()
-              ));
-              break;
-
-          }
-        },
+      child: new InkWell(
         splashColor: Colors.green[700],
         child: Center(
           child: Column(
@@ -53,12 +22,33 @@ class MenuDashBoard extends StatelessWidget {
               Image.asset(icon),
               Text(
                 title,
-                style: new TextStyle(fontSize: 17, fontStyle: FontStyle.normal, ),
+                style: new TextStyle(fontSize: 18, fontStyle: FontStyle.normal, ),
                 textAlign: TextAlign.center,
               )
             ],
           ),
         ),
+        onTap: (){
+
+          switch (fenetre) {
+            case 1:
+              Navigator.popAndPushNamed(context, '/chapelet');
+              break;
+            case 2:
+              Navigator.popAndPushNamed(context, '/apprentissage');
+              break;
+            case 3:
+              Navigator.popAndPushNamed(context, '/invocations');
+              break;
+            case 4:
+              Navigator.popAndPushNamed(context, '/islampiliers');
+              break;
+            default:
+            //Navigator.popAndPushNamed(context, '/');
+              break;
+          }
+
+        },
       ),
     );
   }
